@@ -1,8 +1,12 @@
-from flask import Flask, render_template
+from flask import Blueprint, Flask, render_template
+
+from flask_blog import blog
 
 app = Flask(__name__)
 
 
-@app.route('/')
-def index():
-    return render_template('home.html', title="Home Page")
+def create_app():
+    app.register_blueprint(blog.bp)
+
+
+create_app()
