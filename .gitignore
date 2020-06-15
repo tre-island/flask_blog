@@ -575,3 +575,5 @@ MigrationBackup/
 venv/
 
 .idea/
+
+.DS_Store
